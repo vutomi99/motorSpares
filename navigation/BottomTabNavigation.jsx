@@ -36,7 +36,8 @@ const BottomTabNavigation = () => {
          }}
         />
 
-        <Tab.Screen name="Search"
+        <Tab.Screen 
+        name="Search"
          component={Search}
          options={{
             tabBarIcon:({focused})=>{
@@ -46,7 +47,8 @@ const BottomTabNavigation = () => {
          }}
         />
 
-        <Tab.Screen name="Profile"
+        <Tab.Screen 
+        name="Profile"
          component={Profile}
          options={{
             tabBarIcon:({focused})=>{
