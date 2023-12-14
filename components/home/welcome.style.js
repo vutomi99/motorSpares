@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
    searchIcon:{
         marginHorizontal:10,
         color:COLORS.gray,
-        marginTop: SIZES.small
+        marginTop: SIZES.small-6
    },
    searchWrapper:{
     flex: 1,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     fontFamily:"regular",
     width:"100%",
     height:"100%",
-    paddingHorizontal: SIZES.small
+    paddingHorizontal: SIZES.small-5
    },
    searchBtn:{
     width: 50,

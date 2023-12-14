@@ -12,7 +12,7 @@ const Welcome = () => {
   return (
     <View>
       <View style= {styles.container}>
-        <Text style = {styles.welcomeTxt(COLORS.black,SIZES.xsmall)}>Find The Most</Text>
+        <Text style = {styles.welcomeTxt(COLORS.black,SIZES.xSmall-8)}>Find The Most</Text>
         <Text style = {styles.welcomeTxt(COLORS.primary,0)}>Reliable parts</Text>
       
       </View>

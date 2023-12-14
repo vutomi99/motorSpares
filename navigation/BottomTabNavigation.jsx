@@ -11,7 +11,7 @@ const screenOptions ={
     //properties to manupulate 
     tabBarShowLabel: false,
     tabBarHideOnKeyboard: true,
-    hearderShown:false,
+    headerShown: false ,
     tabStyle:{
         position:"absolute",
         bottom:0,
@@ -31,7 +31,8 @@ const BottomTabNavigation = () => {
          options={{
             tabBarIcon:({focused})=>{
                 return<Ionicons name={focused? "home": "home-outline"} 
-                size={24} color={focused ? COLORS.primary :COLORS.gray2}/>
+                size={24} color={focused ? COLORS.primary :COLORS.gray2}
+                />
             }
          }}
         />

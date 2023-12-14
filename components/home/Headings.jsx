@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View, } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import React from 'react'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import styles from './headings.style'
 import {Ionicons} from "@expo/vector-icons";
 import {COLORS} from '../../constants'
 
