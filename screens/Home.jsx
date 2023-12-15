@@ -16,7 +16,7 @@ const Home =() => {
            <View style ={styles.appBarWrapper}>
 
                 <View style ={styles.appBar}>
-                    <Ionicons  name= 'locate-outline' size ={24}/>
+                    <Ionicons  name= 'location-outline' size ={24}/>
 
                     <Text style ={styles.location}>Pretoria North</Text>
                     <View style={{alignItems: "flex-end"}}>
