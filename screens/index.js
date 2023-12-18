@@ -5,12 +5,14 @@ import Search from './Search';
 import Profile from './Profile';
 import ProductDetails from './ProductDetails';
 import Cart from './Cart';
+import NewRivals from './NewRivals';
 
 export{
     Home,
     Search,
     Profile,
     ProductDetails,
-    Cart
+    Cart,
+    NewRivals
 }
 

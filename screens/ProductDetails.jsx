@@ -3,8 +3,12 @@ import React,{useState} from 'react'
 import styles from './productDetails.style'
 import {Ionicons,SimpleLineIcons,MaterialCommunityIcons,Fontisto} from '@expo/vector-icons'
 import {COLORS,SIZES} from '../constants'
+import { useRoute } from '@react-navigation/native';
 
 const ProductDetails = ({navigation}) => {
+  const route = useRoute();
+  const {item}= route.params;
+
   const  [count,setCount] = useState(1);
   const increment =()=>{
     setCount(count +1)
@@ -28,15 +32,17 @@ const ProductDetails = ({navigation}) => {
       </View>
 
       <Image
-           source = {{uri: "https://assets-valeo.keepeek.com/medias/domain8143/media359/53905-36hueb66wr-preview1.png"}}
+           source = {{uri: item.imageUrl}}
            style = {styles.image}
       />
 
       <View style ={styles.detais}>
           <View  style ={styles.titleRow}>
-            <Text style ={styles.title}>Spark plug</Text>
-            <View  style ={styles.Pricewrapper}></View>
-            <Text style ={styles.price}>R 75</Text>
+            <Text style ={styles.title}>{item.title}</Text>
+            <View  style ={styles.Pricewrapper}>
+            <Text style ={styles.price}>{item.price}</Text>
+            </View>
+          
           </View>
 
           <View style ={styles.ratingRow}>
@@ -78,7 +84,7 @@ const ProductDetails = ({navigation}) => {
           <View style ={styles.descriptionWrepper}>
             <Text style ={styles.description}>Description</Text>
             <Text style ={styles.DscBody}>
-            Double Iridium Spark Plugs are engineered to deliver both high performance and long life, representing advanced original equipment (OE) spark plug technology
+            {item.description}
               
               </Text> 
 
@@ -88,7 +94,7 @@ const ProductDetails = ({navigation}) => {
             <View  style ={styles.location}>
               <View style ={{flexDirection:"row"}}>
               <Ionicons name='location-outline' size={20}/>
-              <Text> Pretoria </Text>
+              <Text> {item.product_location} </Text>
 
               </View>
               <View style ={{flexDirection:"row"}}>
