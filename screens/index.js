@@ -6,6 +6,7 @@ import Profile from './Profile';
 import ProductDetails from './ProductDetails';
 import Cart from './Cart';
 import NewRivals from './NewRivals';
+import LoginPage from './LoginPage';
 
 export{
     Home,
@@ -13,6 +14,7 @@ export{
     Profile,
     ProductDetails,
     Cart,
-    NewRivals
+    NewRivals,
+    LoginPage
 }
 
