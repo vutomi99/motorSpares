@@ -9,48 +9,44 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { COLORS } from '../constants';
 
-
 const validationSchema = Yup.object().shape({
 
 
-      password: Yup.string()
+    password: Yup.string()
 
-        .min(6, 'Must be 6 characters or More')
+      .min(6, 'Must be 6 characters or More')
 
-        .required('Required'),
+      .required('Required'),
 
-      email: Yup.string().email('Invalid email address').required('Required'),
+    email: Yup.string().email('Invalid email address').required('Required'),
 
 });
 
+const SignUp = () => {
 
-const LoginPage = ({navigation}) => {
-  const [loader,setLoader] = useState(false);
-  const [responseData,setResponseData] = useState(null);
-  const [obsecureText,setObsecureText]=useState(false)
-
+    const [loader,setLoader] = useState(false);
+    const [responseData,setResponseData] = useState(null);
+    const [obsecureText,setObsecureText]=useState(false)
   
-
-  const inValidForm = ()=>{
-    Alert.alert(
-        "Invalid Form",
-        "Please provide all required fields to Continue!",
-        [
-            {
-                text: "Cancel", onPress:()=>{}
-              
-            },
-            {
-                text: "Continue", onPress:()=>{}
-              
-            },
-            // {defaultIndex: 1}
-        ]
-    )
-}
-  
+    const inValidForm = ()=>{
+      Alert.alert(
+          "Invalid Form",
+          "Please provide all required fields to Continue!",
+          [
+              {
+                  text: "Cancel", onPress:()=>{}
+                
+              },
+              {
+                  text: "Continue", onPress:()=>{}
+                
+              },
+              // {defaultIndex: 1}
+          ]
+      )
+  }
   return (
-   <ScrollView>
+    <ScrollView>
     <SafeAreaView style={{marginHorizontal:20}}>
       <View>
         <Backbtn onPress={()=>navigation.goBack()}/>
@@ -61,8 +57,10 @@ const LoginPage = ({navigation}) => {
           <Text style={styles.title}>Rev Up with Ease: Your Car Parts, Just a Tap Away</Text>
 
       <Formik
-       
-        >
+        initialValues={{email:'',password:' '}}
+        validationSchema={validationSchema}
+        onSubmit={(values)=> console.log(values)}
+      >
 
           {({ handleChange,touched, handleBlur, handleSubmit, values,errors,isValid,setFieldTouched }) => (
                 <View>
@@ -147,5 +145,6 @@ const LoginPage = ({navigation}) => {
   )
 }
 
-export default LoginPage
+export default SignUp
 
+//const styles = StyleSheet.create({})
